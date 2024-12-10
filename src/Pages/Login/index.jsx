@@ -50,7 +50,7 @@ const Login = () => {
                 </div>
                 <div className="login-container-home">
                     <form className="login-form-home" onSubmit={handleSubmit}>
-                        <label htmlFor="email">Correo Electrónico</label>
+                        <label htmlFor="email">Correo Electrónico Barrio-ya</label>
                         <input type="email" id="email" placeholder="BarrioYA@gmail.com" onChange={handleChange} required />
                         
                         <label htmlFor="password">Contraseña</label>
