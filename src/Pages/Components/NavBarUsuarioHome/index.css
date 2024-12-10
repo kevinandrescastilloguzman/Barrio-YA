@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Navbar Styles */
+.navbar-Usuario-home {
+  overflow: hidden;
+  margin-right: 150px;
+}
+
+.navbar-list-Usuario-home {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-item,
+.navbar-item-Login,
+.navbar-item-CreateAccount {
+  margin-right: 18px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 550;
+  font-size: 16px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+
+
+.icon-Usuario-home{
+  display: grid;
+  place-items: center;
+}
+
+.icono-Colombia,
+.icono-usuario-home,
+.icono-Carro-compras{
+  width: 40px;
+  height: 100%;
+  margin-left: 30px;
+}
+

@@ -1,0 +1,25 @@
+/* Header Styles */
+.HeaderUsuarioHome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #77d770;
+    padding: 10px;
+    height: 80px;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+  }
+  
+  
+  .logo {
+    height: 70px;
+  }
+  
+  .Contenedor-header-usuario-home-izquierdo {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+  }
+    

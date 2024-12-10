@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.contenedor-form-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;
+  background: rgb(242,242,242);
+  background: linear-gradient(306deg, rgba(242,242,242,1) 54%, rgba(119,215,112,1) 81%);
+  margin-top: 100px;
+  height: 85vh;
+}
+
+.titulo-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.titulo-home h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  color: black;
+}
+
+.titulo-home p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  margin-top: 30px;
+  width: 30%;
+}
+
+.titulo-home p a {
+  text-decoration: none;
+  color: #77d770;
+  font-weight: 450;
+
+}
+
+.login-form-home {
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  width: 280px;
+  background-color: #f2f2f2;
+  border: 2px solid #77d770;
+  border-radius: 20px;
+  margin-top: 80px;
+}
+
+.login-form-home p {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+
+.login-form-home input {
+  width: 100%;
+  padding: 12px 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #D9D9D9;
+  color: black;
+}
+
+.login-form-home a {
+  text-decoration: none;
+  color: gray;
+  margin: 20px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.button-login-home {
+  width: 100%;
+  padding: 10px 46px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 30px;
+  background-color: #77d770;
+}
+
+.login-form-home label{
+  font-family: "Roboto", sans-serif;
+  font-weight: 450;
+  font-size: 16px;
+  color: black;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  text-align: left;
+}

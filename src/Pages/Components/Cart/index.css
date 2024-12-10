@@ -1,0 +1,15 @@
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background: red;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000; /* Asegúrate de que el carrito esté sobre otros elementos */
+}
+
+.products div {
+  cursor: pointer;
+  margin: 10px 0;
+}

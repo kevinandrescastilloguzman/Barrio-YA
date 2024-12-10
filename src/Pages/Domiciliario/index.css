@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Estilos Globales */
+.main-domiciliario {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+
+/* Sección 1 */
+.section-domiciliario-1 {
+  background-color: #77d770;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 100px;
+  height: 85vh;
+}
+
+.section-domiciliario-1-left, .section-domiciliario-1-right {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.contenedor-h1-domiciliario {
+  width: 100%;
+  background: linear-gradient(67deg, rgba(242,242,242,1) 48%, rgba(119,215,112,1) 88%);
+  padding: 30px 0;
+  margin-bottom: 60px;
+}
+
+.h1-domiciliario {
+  margin-left: 150px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 46px;
+}
+
+.h1-domiciliario b {
+  color: #77d770;
+}
+
+.p-domiciliario {
+  text-align: center;
+  margin-left: 150px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 450;
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+.p-domiciliario b {
+  color: white;
+}
+
+.domiciliario-clientes {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 12px 30px;
+}
+
+.domiciliario-clientes:hover {
+  background-color: #77d770;
+}
+
+.img-domiciliario {
+  width: 70%;
+}
+
+/* Sección 2 Artículo 1 */
+.section-domiciliario-2 {
+  width: 100%;
+  background-color: #f2f2f2;
+  display: grid;
+  place-items: center;
+}
+.section-domiciliario-2-right{
+    display: grid;
+    place-items: center;
+}
+
+.section-domiciliario-2-article-1, .section-domiciliario-2-article-2 {
+  width: 70%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 100px;
+}
+.section-domiciliario-2-article-2{
+    margin-bottom: 100px;
+}
+
+.img-domiciliario-article-1, .img-domiciliario-article-2 {
+  width: 70%;
+}
+
+.h1-article-domiciliario-1, .h1-article-domiciliario-2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 46px;
+  margin-bottom: 40px;
+}
+
+.h1-article-domiciliario-1 {
+  text-align: right;
+}
+
+.h1-article-domiciliario-2 {
+  text-align: left;
+}
+
+.p-domiciliario-1, .p-domiciliario-2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.p-domiciliario-1 {
+  text-align: right;
+}
+
+.p-domiciliario-2 {
+  text-align: left;
+}
+
+.p-domiciliario-1 b, .p-domiciliario-2 b {
+  color: #77d770;
+}
