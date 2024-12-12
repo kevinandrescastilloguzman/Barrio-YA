@@ -4,6 +4,7 @@ import Footer from '../Components/Footer/index';
 import Domiciliarioimg from '../../Media/img/Domiciliario-Home.png';
 import DomiciliarioSection2 from '../../Media/img/DomiciliarioSection2-01.png';
 import DomiciliarioSection21 from '../../Media/img/DomiciliarioSection2-02.png';
+import { Link } from 'react-router-dom';
 import './index.css';
 
 
@@ -22,7 +23,7 @@ function Domiciliario() {
             <p className="p-domiciliario">
             Entrega productos en tu barrio, gana ingresos y apoya a tu comunidad. Regístrate ahora y comienza a entregar hoy mismo.
             </p>
-            <button className="domiciliario-clientes">Únete como domiciliario</button>
+            <button className="domiciliario-clientes"><Link className="navbar-item-home" to="/LoginDomiciliarios">"Únete a Barrio-YA"</Link></button>
           </div>
           <div className="section-domiciliario-1-right">
             <img className="img-domiciliario" src={Domiciliarioimg} alt="Home Vendedor" />

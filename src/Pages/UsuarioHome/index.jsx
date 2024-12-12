@@ -54,7 +54,7 @@ function UsuarioHome () {
                 <section className='section-1-home'>
                     <img className='img-backimg' alt="Fondo" src={Backimg} />
                     <div className='color-img'></div>
-                    <h1 className='h1-user-home'>Aprovecha los descuentos Kevin el mejor<br/>disponibles solo en "Barrio-Ya"</h1>
+                    <h1 className='h1-user-home'>Aprovecha los descuentos <br/>disponibles solo en "Barrio-Ya"</h1>
                     <div className='img-tiendas'>
                         <img className='ico-img-tienda' alt="Tienda 1" src={img} onClick={() => addToCart({ id: 1, name: 'Producto 1', price: 10 })} />
                         <img className='ico-img-tienda' alt="Tienda 2" src={imgg} onClick={() => addToCart({ id: 2, name: 'Producto 2', price: 20 })} />
@@ -67,7 +67,6 @@ function UsuarioHome () {
                 <section>
                     <Productos />
                 </section>
-                
                 {isCartVisible && (
                   <Cart 
                     cart={cart}

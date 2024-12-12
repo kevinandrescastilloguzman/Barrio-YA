@@ -1,14 +1,15 @@
-require('dotenv').config();
-const express = require('express');
-const bodyParser = require('body-parser');
-const mysql = require('mysql');
-const cors = require('cors'); // Importa cors una vez
-const jwt = require('jsonwebtoken'); // Importa JWT
+require('dotenv').config(); // Carga las variables de entorno
+const express = require('express'); // Importa Express
+const bodyParser = require('body-parser'); // Importa Body Parser
+const mysql = require('mysql'); // Importa MySQL
+const cors = require('cors'); // Importa CORS
+const jwt = require('jsonwebtoken'); // Importa JSON Web Token
 
 const app = express();
-app.use(bodyParser.json());
-app.use(cors()); // Usa cors una vez
+app.use(bodyParser.json()); // Utiliza Body Parser para parsear JSON
+app.use(cors()); // Habilita CORS
 
+// Configura la conexión a la base de datos MySQL
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -21,10 +22,10 @@ db.connect((err) => {
     console.log('Conectado a la base de datos');
 });
 
-// Ruta para registrar usuarios
+// Ruta para registrar usuarios generales
 app.post('/register', (req, res) => {
     const { nombre, correo, direccion, telefono, contrasena } = req.body;
-    const sql = 'INSERT INTO usuarios (nombre, correo, direccion, telefono, contrasena) VALUES (?, ?, ?, ?, ?)';
+    const sql = 'INSERT INTO usuarios (nombre_completo, correo, direccion, telefono, contrasena) VALUES (?, ?, ?, ?, ?)';
     db.query(sql, [nombre, correo, direccion, telefono, contrasena], (err, result) => {
         if (err) {
             console.error('Error al registrar:', err);
@@ -32,6 +33,20 @@ app.post('/register', (req, res) => {
             return;
         }
         res.send('Usuario registrado');
+    });
+});
+
+// Nueva ruta para registrar domiciliarios
+app.post('/register-domiciliario', (req, res) => {
+    const { nombre, correo, direccion, telefono, numero_placa, contrasena } = req.body;
+    const sql = 'INSERT INTO domiciliarios (nombre_completo, correo, direccion, telefono, numero_placa, contrasena) VALUES (?, ?, ?, ?, ?, ?)';
+    db.query(sql, [nombre, correo, direccion, telefono, numero_placa, contrasena], (err, result) => {
+        if (err) {
+            console.error('Error al registrar domiciliario:', err);
+            res.status(500).send('Error al registrar domiciliario');
+            return;
+        }
+        res.send('Domiciliario registrado');
     });
 });
 
@@ -53,6 +68,26 @@ app.post('/login', (req, res) => {
         }
     });
 });
+
+// Nueva ruta para iniciar sesión de domiciliarios
+app.post('/login-domiciliario', (req, res) => {
+    const { correo, contrasena } = req.body;
+    const sql = 'SELECT * FROM domiciliarios WHERE correo = ? AND contrasena = ?';
+    db.query(sql, [correo, contrasena], (err, results) => {
+        if (err) {
+            console.error('Error al iniciar sesión de domiciliario:', err);
+            res.status(500).send('Error al iniciar sesión de domiciliario');
+            return;
+        }
+        if (results.length > 0) {
+            const token = jwt.sign({ id: results[0].id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+            res.json({ message: 'Inicio de sesión de domiciliario exitoso', token });
+        } else {
+            res.status(401).send('Correo o contraseña incorrectos');
+        }
+    });
+});
+
 
 // Ruta para crear pedidos
 app.post('/crear-pedido', (req, res) => {

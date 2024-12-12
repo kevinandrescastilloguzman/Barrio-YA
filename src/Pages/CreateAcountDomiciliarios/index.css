@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+.contenedor-form-creat-home{
+    display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;
+  background: rgb(242,242,242);
+  background: linear-gradient(306deg, rgba(242,242,242,1) 54%, rgba(119,215,112,1) 81%);
+  height: 100vh;
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+.login-form-creat-home{
+    display: grid;
+    place-items: center;
+    padding: 30px;
+    width: 400px;
+    background-color: #f2f2f2;
+    border: 2px solid #77d770;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.login-form-creat-home input {
+    width: 100%;
+    padding: 12px 8px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #D9D9D9;
+    color: black;
+  }
+
+  .login-form-creat-home label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 450;
+    font-size: 16px;
+    color: black;
+  }
+
+  .checkbox-container-home{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .checkbox-container-home input{
+    width: 20px;
+    margin-right: 10px;
+  }
+  .checkbox-container-home a{
+    text-decoration: none;
+    color: #e5c369;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .button-login-creat-home {
+    width: 100%;
+    padding: 10px 46px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 30px;
+    background-color: #77d770;
+  }
+
+
+  .titulo-home-creat-home{
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .titulo-home-creat-home h1{
+    font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  color: black;
+  margin-top: 100px;
+  }
+  .titulo-home-creat-home p{
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  margin-top: 30px;
+  }
+
+  .checkbox-container{
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .checkbox-container input{
+    width: 20px;
+    margin-right: 10px;
+  }
+  .termino-condiciones{
+    margin-left: 10px;
+    color: #77d770;
+  }

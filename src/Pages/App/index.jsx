@@ -7,6 +7,9 @@ import Login from '../Login/index';
 import CreateAcount from '../CreateAcount/index';
 import UsuarioHome from '../UsuarioHome/index';
 import PrivateRoute from '../../PrivateRoute';
+import LoginDomiciliarios from '../LoginDomiciliarios/index';
+import CreateAcountDomiciliarios from '../CreateAcountDomiciliarios/index';
+
 import './index.css';
 
 const AppRouters = () => {
@@ -16,6 +19,8 @@ const AppRouters = () => {
         { path: '/Tiendas', element: <Tiendas /> },
         { path: '/Login', element: <Login /> },
         { path: '/CreateAconut', element: <CreateAcount /> },
+        { path: '/LoginDomiciliarios', element: <LoginDomiciliarios />},
+        { path: '/CreateAconutDomiciliarios', element: <CreateAcountDomiciliarios />},
         { path: '/UsuarioHome', element: <PrivateRoute component={UsuarioHome} /> },
     ]);
     return routes;
